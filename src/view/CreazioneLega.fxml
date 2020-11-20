@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="750.0" prefWidth="700.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="700.0">
+                     <children>
+                        <Label layoutX="249.0" layoutY="31.0" text="CREAZIONE LEGA">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox prefHeight="650.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="600.0" prefWidth="700.0">
+                     <children>
+                        <Label layoutX="85.0" layoutY="23.0" text="Nome lega">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="textLega" layoutX="350.0" layoutY="26.0" prefHeight="25.0" prefWidth="250.0" />
+                        <TextField fx:id="textNomeAllenatore1" layoutX="67.0" layoutY="158.0" />
+                        <TextField fx:id="textNomeAllenatore2" layoutX="66.0" layoutY="218.0" />
+                        <TextField fx:id="textNomeAllenatore3" layoutX="66.0" layoutY="273.0" />
+                        <TextField fx:id="textNomeAllenatore4" layoutX="66.0" layoutY="325.0" />
+                        <TextField fx:id="textNomeAllenatore5" layoutX="66.0" layoutY="382.0" />
+                        <TextField fx:id="textNomeAllenatore6" layoutX="66.0" layoutY="436.0" />
+                        <TextField fx:id="textNomeAllenatore7" layoutX="66.0" layoutY="493.0" />
+                        <TextField fx:id="textNomeAllenatore8" layoutX="66.0" layoutY="552.0" />
+                        <Label layoutX="89.0" layoutY="126.0" text="Nome allenatore" />
+                        <Label layoutX="316.0" layoutY="126.0" text="Cognome allenatore" />
+                        <Label layoutX="562.0" layoutY="126.0" text="Fanta-squadra" />
+                        <TextField fx:id="textCognomeAllenatore1" layoutX="296.0" layoutY="158.0" />
+                        <TextField fx:id="textSquadra1" layoutX="526.0" layoutY="158.0" />
+                        <TextField fx:id="textCognomeAllenatore2" layoutX="296.0" layoutY="218.0" />
+                        <TextField fx:id="textSquadra7" layoutX="526.0" layoutY="493.0" />
+                        <TextField fx:id="textSquadra6" layoutX="526.0" layoutY="436.0" />
+                        <TextField fx:id="textSquadra5" layoutX="526.0" layoutY="382.0" />
+                        <TextField fx:id="textSquadra4" layoutX="526.0" layoutY="325.0" />
+                        <TextField fx:id="textSquadra3" layoutX="526.0" layoutY="273.0" />
+                        <TextField fx:id="textSquadra2" layoutX="526.0" layoutY="218.0" />
+                        <TextField fx:id="textCognomeAllenatore4" layoutX="296.0" layoutY="325.0" />
+                        <TextField fx:id="textCognomeAllenatore3" layoutX="296.0" layoutY="273.0" />
+                        <TextField fx:id="textSquadra8" layoutX="526.0" layoutY="552.0" />
+                        <TextField fx:id="textCognomeAllenatore8" layoutX="296.0" layoutY="552.0" />
+                        <TextField fx:id="textCognomeAllenatore7" layoutX="296.0" layoutY="493.0" />
+                        <TextField fx:id="textCognomeAllenatore6" layoutX="296.0" layoutY="436.0" />
+                        <TextField fx:id="textCognomeAllenatore5" layoutX="296.0" layoutY="382.0" />
+                        <Label layoutX="77.0" layoutY="77.0" text="Campionato">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="boxCampionato" layoutX="400.0" layoutY="80.0" prefWidth="150.0" />
+                        <Button layoutX="320.0" layoutY="601.0" mnemonicParsing="false" onMouseClicked="#creaLega" prefWidth="100.0" text="Conferma" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children></VBox>
+      <VBox fx:id="boxMercato" prefHeight="750.0" prefWidth="700.0" visible="false">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="700.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="700.0">
+                     <children>
+                        <Label layoutX="291.0" layoutY="31.0" text="MERCATO">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <Pane prefHeight="650.0" prefWidth="700.0">
+               <children>
+                  <Label layoutX="524.0" layoutY="27.0" text="Fanta-Squadra" />
+                  <ComboBox fx:id="boxSquadra" layoutX="488.0" layoutY="71.0" onAction="#cambioSquadra" prefWidth="150.0" />
+                  <Button fx:id="btnInserisci" layoutX="319.0" layoutY="179.0" mnemonicParsing="false" onMouseClicked="#inserisciTabella" text="Inserisci" />
+                  <Button fx:id="btnRimuovi" layoutX="319.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#rimuoviTabella" text="Rimuovi" />
+                  <Button layoutX="316.0" layoutY="374.0" mnemonicParsing="false" onMouseClicked="#inserisciCalciatori" text="Conferma" />
+                  <Label layoutX="127.0" layoutY="27.0" text="Calciatori" />
+                  <ComboBox fx:id="boxRuolo" layoutX="77.0" layoutY="71.0" onAction="#cambioRuolo" prefWidth="150.0" />
+                  <Button layoutX="520.0" layoutY="517.0" mnemonicParsing="false" onMouseClicked="#salva" text="Salva" />
+                  <TableView fx:id="tableCalciatori" layoutX="1.0" layoutY="147.0" prefHeight="276.0" prefWidth="301.0" />
+                  <TableView fx:id="tableCalciatoriRosa" layoutX="397.0" layoutY="147.0" prefHeight="276.0" prefWidth="301.0" />
+               </children>
+            </Pane>
+         </children></VBox>
+   </children>
+</HBox>
